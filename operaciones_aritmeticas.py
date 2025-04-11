@@ -7,4 +7,4 @@ class OperacionesAritmeticas:
         return self.operando1 + self.operando2
 
     def calcular_division(self):
-        return  self.operando1 / self.operando2
+        return self.operando1 / self.operando2
