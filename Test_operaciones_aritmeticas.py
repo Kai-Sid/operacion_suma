@@ -1,5 +1,5 @@
 import unittest
-from suma import Suma
+from operaciones_aritmeticas import OperacionesAritmeticas
 class TestSuma(unittest.TestCase):
     def test_suma_dosNumeros_retornaSuma(self):
         # Arrange
@@ -21,6 +21,21 @@ class TestSuma(unittest.TestCase):
         objSuma = Suma(3, "a")
         with self.assertRaises(TypeError):
             objSuma.calcularSuma()
+
+    def test_division_dosNumeros_retornaDivision(self):
+        # Arrange
+        dividendo = 10
+        divisor = 15
+
+        resultadoEsperado = 0.666
+
+        objSuma = OperacionesAritmeticas(dividendo, divisor)
+
+        # Act
+        resultadoActual = objSuma.calcular_division()
+
+        # Assert
+        self.assertAlmostEqual(resultadoEsperado, resultadoActual, 2, msg="Fallo la division")
 
 
 if __name__ == '__main__':
